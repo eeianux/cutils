@@ -1,11 +1,12 @@
-package excel_utils
+package excel
 
 import (
-	"github.com/eeianux/cutils/excel_utils/excel_impl"
 	"io"
 
-	"github.com/eeianux/cutils/excel_utils/core"
-	"github.com/eeianux/cutils/excel_utils/csv_impl"
+	"github.com/eeianux/cutils/excel/excel_impl"
+
+	"github.com/eeianux/cutils/excel/core"
+	"github.com/eeianux/cutils/excel/csv_impl"
 )
 
 type Utils interface {

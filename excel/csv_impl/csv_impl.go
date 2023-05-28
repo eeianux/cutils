@@ -4,7 +4,7 @@ import (
 	"encoding/csv"
 	"io"
 
-	"github.com/eeianux/cutils/excel_utils/core"
+	"github.com/eeianux/cutils/excel/core"
 )
 
 type CsvImpl struct{}

@@ -2,8 +2,9 @@ package compress
 
 import (
 	"bytes"
-	"github.com/klauspost/compress/zstd"
 	"io"
+
+	"github.com/klauspost/compress/zstd"
 )
 
 type zstdImpl struct {

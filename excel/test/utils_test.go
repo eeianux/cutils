@@ -2,15 +2,16 @@ package test
 
 import (
 	"fmt"
-	. "github.com/bytedance/mockey"
-	"github.com/eeianux/cutils/excel_utils"
-	. "github.com/smartystreets/goconvey/convey"
 	"io"
 	"os"
 	"testing"
+
+	. "github.com/bytedance/mockey"
+	"github.com/eeianux/cutils/excel"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
-func compare2File(a, b io.Reader, impl excel_utils.Utils) {
+func compare2File(a, b io.Reader, impl excel.Utils) {
 	fa, ha, err := impl.Read(a)
 	So(err, ShouldBeNil)
 	fb, hb, err := impl.Read(b)
@@ -22,7 +23,7 @@ func compare2File(a, b io.Reader, impl excel_utils.Utils) {
 func TestCsvImpl(t *testing.T) {
 	PatchConvey("case csvImpl", t, func() {
 		input, ouput := "test.csv", "ans.csv"
-		impl := excel_utils.NewCsvImpl()
+		impl := excel.NewCsvImpl()
 		f, err := os.Open(input)
 		if err != nil {
 			So(err, ShouldBeNil)
@@ -47,7 +48,7 @@ func TestCsvImpl(t *testing.T) {
 
 	PatchConvey("case excelImpl", t, func() {
 		input, ouput := "test.xlsx", "ans.xlsx"
-		impl := excel_utils.NewExcelImpl("")
+		impl := excel.NewExcelImpl("")
 		f, err := os.Open(input)
 		if err != nil {
 			So(err, ShouldBeNil)

@@ -2,8 +2,9 @@ package compress
 
 import (
 	"bytes"
-	"github.com/golang/snappy"
 	"io"
+
+	"github.com/golang/snappy"
 )
 
 type snappyImpl struct {

@@ -3,10 +3,11 @@ package compress
 import (
 	"encoding/base64"
 	"fmt"
-	. "github.com/bytedance/mockey"
-	. "github.com/smartystreets/goconvey/convey"
 	"math/rand"
 	"testing"
+
+	. "github.com/bytedance/mockey"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 func randStr() string {

@@ -1,10 +1,11 @@
 package excel_impl
 
 import (
-	"github.com/eeianux/cutils/excel_utils/core"
-	"github.com/eeianux/cutils/excel_utils/utils"
-	"github.com/xuri/excelize/v2"
 	"io"
+
+	"github.com/eeianux/cutils/excel/core"
+	"github.com/eeianux/cutils/excel/utils"
+	"github.com/xuri/excelize/v2"
 )
 
 type ExcelImpl struct {
